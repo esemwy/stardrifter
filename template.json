@@ -24,15 +24,6 @@
         }
       },
       "abilities": {
-        "str": {
-          "value": 10
-        },
-        "dex": {
-          "value": 10
-        },
-        "con": {
-          "value": 10
-        },
         "int": {
           "value": 10
         },
@@ -40,6 +31,15 @@
           "value": 10
         },
         "cha": {
+          "value": 10
+        },
+        "str": {
+          "value": 10
+        },
+        "con": {
+          "value": 10
+        },
+        "dex": {
           "value": 10
         }
       }
@@ -50,7 +50,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item"],
     "templates": {
       "base": {
         "description": ""
@@ -61,13 +61,6 @@
       "quantity": 1,
       "weight": 0,
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
     }
   }
 }

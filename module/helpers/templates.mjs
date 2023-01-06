@@ -8,8 +8,6 @@
 
     // Actor partials.
     "systems/stardrifter/templates/actor/parts/actor-features.html",
-    "systems/stardrifter/templates/actor/parts/actor-items.html",
-    "systems/stardrifter/templates/actor/parts/actor-spells.html",
     "systems/stardrifter/templates/actor/parts/actor-effects.html",
   ]);
 };
