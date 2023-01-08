@@ -1,22 +1,22 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
+  "STARDRIFTER.AbilityStr": "Strength",
+  "STARDRIFTER.AbilityCon": "Constitution",
+  "STARDRIFTER.AbilityDex": "Dexterity",
+  "STARDRIFTER.AbilityInt": "Intelligence",
+  "STARDRIFTER.AbilityWis": "Wisdom",
+  "STARDRIFTER.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "STARDRIFTER.AbilityStrAbbr": "str",
+  "STARDRIFTER.AbilityConAbbr": "con",
+  "STARDRIFTER.AbilityDexAbbr": "dex",
+  "STARDRIFTER.AbilityIntAbbr": "int",
+  "STARDRIFTER.AbilityWisAbbr": "wis",
+  "STARDRIFTER.AbilityChaAbbr": "cha",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
+  "STARDRIFTER.EffectCreate": "Create Effect",
+  "STARDRIFTER.EffectToggle": "Toggle Effect",
+  "STARDRIFTER.EffectEdit": "Edit Effect",
+  "STARDRIFTER.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.Add": "Add"
+  "STARDRIFTER.Add": "Add"
 }
