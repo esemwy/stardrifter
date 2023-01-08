@@ -23,11 +23,15 @@
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
+          <label for="system.attributes.background" class="resource-label">Background</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <select name="system.attributes.background" data-type="String">
+          {{#select system.attributes.background}}
+          {{#each backgrounds as |background bg|}}
+          <option value="{bg}">{{background}}</option>
+          {{/each}}
+          {{/select}}
+          </select>
           </div>
         </div>
 
@@ -36,6 +40,30 @@
           <div class="resource-content flexrow flex-center flex-between">
           <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
           </div>
+        </div>
+
+      </div>
+
+      <div class="resources grid grid-4col">
+
+        <div class="resource flex-group-center">
+          <label for="system.attribute.save.mental" class="resource-label rollable" data-roll="d20">Save mental</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.attributes.save.mental" value="{{system.attributes.save.mental}}" data-dtype="Number" readonly/>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.attribute.save.mental" class="resource-label rollable" data-roll="d20">Save Physical</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input type="text" name="system.attributes.save.physical" value="{{system.attributes.save.physical}}" data-dtype="Number" readonly/>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+        </div>
+
+        <div class="resource flex-group-center">
         </div>
 
       </div>
@@ -63,9 +91,9 @@
           <div class="abilities flexcol">
             {{#each system.abilities as |ability key|}}
             <div class="ability flexrow flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20" data-label="{{ability.label}}">{{ability.label}}</label>
               <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+              <span class="ability-mod rollable" data-roll="d20" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=false}}</span>
             </div>
             {{/each}}
           </div>

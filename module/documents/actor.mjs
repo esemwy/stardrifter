@@ -47,12 +47,24 @@ export class StardrifterActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    const actorAbilities = systemData.abilities;
+    const actorAttributes = systemData.attributes;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
+    for (let [key, ability] of Object.entries(actorAbilities)) {
       // Calculate the modifier using d20 rules.
       ability.mod = 20 - ability.value;
     }
+    actorAttributes.save.mental = Math.ceil((
+      actorAbilities.wis.value +
+      actorAbilities.int.value +
+      actorAbilities.cha.value) / 3
+    )
+    actorAttributes.save.physical = Math.ceil((
+      actorAbilities.str.value +
+      actorAbilities.dex.value +
+      actorAbilities.con.value) / 3
+    )
   }
 
   /**

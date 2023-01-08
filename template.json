@@ -8,20 +8,20 @@
           "min": 0,
           "max": 10
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
         "biography": ""
       }
     },
     "character": {
       "templates": ["base"],
       "attributes": {
+        "save": {
+          "mental": 10,
+          "physical": 10
+        },
         "level": {
           "value": 1
-        }
+        },
+        "background": ""
       },
       "abilities": {
         "int": {

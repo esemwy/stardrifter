@@ -69,7 +69,14 @@ export class StardrifterActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
-      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.STARDRIFTER.abilities[k]) ?? k;
+    }
+    context.backgrounds = {
+      spacer: "Spacer",
+      stationer: "Stationer",
+      xmil: "Xmil",
+      groundpounder: "Groundpounder",
+      drifter: "Drifter"
     }
   }
 
