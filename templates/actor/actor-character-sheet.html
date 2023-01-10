@@ -23,15 +23,11 @@
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.attributes.background" class="resource-label">Background</label>
+          <label for="system.stamina.value" class="resource-label">Stamina</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <select name="system.attributes.background" data-type="String">
-          {{#select system.attributes.background}}
-          {{#each backgrounds as |background bg|}}
-          <option value="{bg}">{{background}}</option>
-          {{/each}}
-          {{/select}}
-          </select>
+          <input type="text" name="system.stamina.value" value="{{system.stamina.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <input type="text" name="system.stamina.max" value="{{system.stamina.max}}" data-dtype="Number"/>
           </div>
         </div>
 
@@ -47,6 +43,22 @@
       <div class="resources grid grid-4col">
 
         <div class="resource flex-group-center">
+          <label for="system.attributes.background" class="resource-label">Background</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          <select name="system.attributes.background" data-type="String">
+          {{#select system.attributes.background}}
+          {{#each backgrounds as |background bg|}}
+          <option value="{{bg}}">{{background}}</option>
+          {{/each}}
+          {{/select}}
+          </select>
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+        </div>
+
+        <div class="resource flex-group-center">
           <label for="system.attribute.save.mental" class="resource-label rollable" data-roll="d20">Save mental</label>
           <div class="resource-content flexrow flex-center flex-between">
             <input type="text" name="system.attributes.save.mental" value="{{system.attributes.save.mental}}" data-dtype="Number" readonly/>
@@ -58,12 +70,6 @@
           <div class="resource-content flexrow flex-center flex-between">
             <input type="text" name="system.attributes.save.physical" value="{{system.attributes.save.physical}}" data-dtype="Number" readonly/>
           </div>
-        </div>
-
-        <div class="resource flex-group-center">
-        </div>
-
-        <div class="resource flex-group-center">
         </div>
 
       </div>

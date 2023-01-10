@@ -4,15 +4,20 @@
     "templates": {
       "base": {
         "health": {
-          "value": 10,
+          "value": 8,
           "min": 0,
-          "max": 10
+          "max": 8
         },
         "biography": ""
       }
     },
     "character": {
       "templates": ["base"],
+      "stamina": {
+        "value": 8,
+        "min": 0,
+        "max": 8
+      },
       "attributes": {
         "save": {
           "mental": 10,

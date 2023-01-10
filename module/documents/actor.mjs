@@ -39,7 +39,31 @@ export class StardrifterActor extends Actor {
     this._prepareNpcData(actorData);
   }
 
-  /**
+  _conHPMod = [
+    0, 0, 0,-2,-1, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 2, 3, 4];
+  
+  _conStaminaMod = [
+    0, 0, 0,-5,-4,-3,-2,-1, 0, 0,
+    0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+  _backgroundHPMod = {
+    "spacer": 2,
+    "stationer": 1,
+    "xmil": 1,
+    "groundpounder": 0,
+    "drifter": 1
+  };
+  
+  _backgroundStaminaMod = {
+    "spacer": 0,
+    "stationer": 1,
+    "xmil": 1,
+    "groundpounder": 2,
+    "drifter": 1
+  };
+    
+      /**
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
@@ -59,12 +83,20 @@ export class StardrifterActor extends Actor {
       actorAbilities.wis.value +
       actorAbilities.int.value +
       actorAbilities.cha.value) / 3
-    )
+    );
     actorAttributes.save.physical = Math.ceil((
       actorAbilities.str.value +
       actorAbilities.dex.value +
       actorAbilities.con.value) / 3
-    )
+    );
+
+    const conValue = parseInt(actorAbilities.con.value);
+    const bgValue = systemData.attributes.background;
+
+    systemData.stamina.max = (
+      8 + this._conStaminaMod[conValue] + this._backgroundStaminaMod[bgValue]);
+    systemData.health.max = (
+      8  + this._conHPMod[conValue] + this._backgroundHPMod[bgValue]);
   }
 
   /**
